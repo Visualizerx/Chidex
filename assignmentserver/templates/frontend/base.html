@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {% block title %}
+
+      {% endblock %}
+
+    </title>
+    <link href="{% static 'frontend/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'frontend/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'frontend/css/custom-fonts.css' %}" rel="stylesheet">
+    <link href="{% static 'frontend/css/font-awesome.min.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    {% block content%}
+    <div class="container-fluid" id="top-info">
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#infoTop">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span> 
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="infoTop">
+            <span class="contact-info">
+              <span class="contact-group">
+                  <span class="fa fa-phone"></span>
+                  <span class="contact-text">
+                    08157550744
+                  </span>
+              </span>
+              <span class="contact-group">
+                  <span class="fa fa-envelope"></span>
+                  <span class="contact-text">
+                    youremail@domain.com
+                  </span>
+              </span>
+              <span class="contact-group">
+                  <span class="fa fa-map-marker"></span>
+                  <span class="contact-text">
+                    No, 12 Oluakerele
+                  </span>
+              </span>
+            </span>
+            <span class="contact-info pull-right">
+              <span class="contact-group">
+                  <span class="fa fa-user"></span>
+                  <a href="#" class="contact-text">
+                    Sign Up
+                  </a>
+              </span>
+              <span class="contact-group">
+                  <span class="fa fa-sign-in"></span>
+                  <a href="../backend/login.html" class="contact-text">
+                    Login
+                  </a>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="site-footer">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <h4>Services</h4>
+          <ul class="nav">
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Mobile App Development</a></li>
+            <li><a href="#">Software Development</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h4>Links</h4>
+          <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Services</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h4>Subscribe</h4>
+          <form class="form">
+            <div class="form-group">
+              <input type="text" name="email" class="form-control">
+            </div>
+            <input type="submit" name="submit" value="Subscribe" class="btn btn-default btn-block">
+          </form>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h4>Follow Us</h4>
+          <span class="social-icon">
+            <a href="#" target="_blank">
+              <img src="{% static 'frontend/images/fb.png' %}" class="img-circle">
+            </a>
+            <a href="#" target="_blank">
+              <img src="{% static 'frontend/images/gp.png' %}" class="img-circle">
+            </a>
+            <a href="#" target="_blank">
+              <img src="{% static 'frontend/images/tw.png' %}" class="img-circle">
+            </a>
+          </span>
+        </div>
+
+      </div>
+    </div>
+    <script src="{% static 'frontend/js/jquery.js' %}"></script>
+    <script src="{% static 'frontend/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'frontend/js/bootstrap.js' %}"></script>
+    {% endblock%}
+  </body>
+</html>
